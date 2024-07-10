@@ -7,11 +7,22 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
-    public function Index() {
-        return view('about');
-    }
+    
 
-    public function ContactMethod() {
+
+    public function HomeMain(){
+        return view('frontend.index');
+    }// end mehtod 
+
+
+    public function Index(){
+        return view('about');
+    } // end mehtod 
+
+
+    public function ContactMethod(){
         return view('contact');
     }
+
+
 }

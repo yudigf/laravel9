@@ -2,22 +2,24 @@
 
 namespace App\Http\Controllers\Home;
 
-use App\Models\HomeSlide;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\HomeSlide;
 use Image;
-
 
 class HomeSliderController extends Controller
 {
-    public function HomeSlider()
-    {
-        $homeslide = HomeSlide::find(1);
-        return view('admin.home_slide.home_slide_all', compact('homeslide'));
-    }
+     public function HomeSlider(){
 
-    public function UpdateSlider(Request $request)
-    {
+        $homeslide = HomeSlide::find(1);
+        return view('admin.home_slide.home_slide_all',compact('homeslide'));
+
+     } // End Method 
+
+
+
+     public function UpdateSlider(Request $request){
+
         $slide_id = $request->id;
 
         if ($request->file('home_slide')) {
@@ -55,6 +57,12 @@ class HomeSliderController extends Controller
         );
 
         return redirect()->back()->with($notification);
-        }
-    }
- }
+
+        } // end Else
+
+     } // End Method 
+
+
+
+}
+ 

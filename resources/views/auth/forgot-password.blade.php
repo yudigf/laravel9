@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="utf-8" />
-        <title>Recover Password | Admin</title>
+        <title>Recover Password | Admin </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesdesign" name="author" />
@@ -39,23 +39,27 @@
                         <h4 class="text-muted text-center font-size-18"><b>Reset Password</b></h4>
     
                         <div class="p-3">
-                            <form method="POST" class="form-horizontal mt-3" action="{{ route('password.email') }}">
-                                    @csrf
+                           
 
-                                <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                'Forgot your password?<strong> No problem.</strong> Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.'
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>
-    
-                                <div class="form-group mb-3">
-                                    <div class="col-xs-12">
-                                        <input class="form-control" id="email" name="email" type="email" required="" placeholder="Email">
-                                    </div>
-                                </div>
+                            
+
+         <form  class="form-horizontal mt-3" method="POST" action="{{ route('password.email') }}">
+            @csrf
+
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+     Forgot your password?<strong> No problem.</strong> Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="form-group mb-3">
+        <div class="col-xs-12">
+            <input class="form-control"  id="email" type="email" name="email"  required="" placeholder="Email">
+        </div>
+    </div>
     
                                 <div class="form-group pb-2 text-center row mt-3">
-                                    <div class="col-12">
-                                        <button class="btn btn-info w-100 waves-effect waves-light" type="submit">Send Email</button>
+             <div class="col-12">
+             <button class="btn btn-info w-100 waves-effect waves-light" type="submit">Send Email</button>
                                     </div>
                                 </div>
                             </form>
@@ -71,7 +75,7 @@
         
 
         <!-- JAVASCRIPT -->
-        <script src="{{ asset('backend/assets/libs/jquery/jquery.min.js') }}"></script>
+      <script src="{{ asset('backend/assets/libs/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('backend/assets/libs/metismenu/metisMenu.min.js') }}"></script>
         <script src="{{ asset('backend/assets/libs/simplebar/simplebar.min.js') }}"></script>
